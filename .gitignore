@@ -1,0 +1,7 @@
+/uploads
+/.idea
+/application/config/database.php
+/application/logs
+/*.txt
+
+/atlassian-ide-plugin.xml
