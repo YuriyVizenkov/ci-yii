@@ -109,18 +109,13 @@ class ClientManager
         return $this->APP_URL;
     }
 
-    public function registerCoreJQuery()
+    /**
+     * @param string $jQueryCore
+     * @param array $params
+     */
+    public function registerCoreJQuery($jQueryCore, array $params = array())
     {
-        if (!isset(self::$packageJS['core'])) {
-            if (!isset(self::$packageJS['core'])) {
-                self::$packageJS['core'] = '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min';
-            }
-            if (!isset(self::$packageJS['core_ui'])) {
-                self::$packageJS['core_ui'] = 'jquery-ui';
-            }
-            $this->output->append_output($this->makeJSTag(self::$packageJS['core'], array(), false));
-            $this->output->append_output($this->makeJSTag(self::$packageJS['core_ui'], array()));
-        }
+        echo $this->makeJSTag($jQueryCore, $params) . "\r\n";
     }
 
     /**
@@ -149,7 +144,7 @@ class ClientManager
      * @param bool $isIncludeAssets
      * @return string
      */
-    private function makeJSTag($file, array $params, $isIncludeAssets = true)
+    private function makeJSTag($file, array $params = array(), $isIncludeAssets = true)
     {
         $assets = ($isIncludeAssets === true) ? $this->assetsJS : '';
         $tag = '<script type="text/javascript" src="' . $assets . $file . '.js" {params}></script>';

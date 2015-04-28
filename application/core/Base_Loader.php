@@ -154,7 +154,6 @@ class Base_Loader extends CI_Loader
         $this->basePathModule = MODULE_PATH . '/';
 		$this->_ci_view_paths[MODULE_PATH . '/photostream/widgets/views/'] = true;
 
-
 		        /*$this->ci_widgets_path[] = APPPATH . 'widgets/filters_panel/';
         $this->ci_widgets_path[] = APPPATH . 'widgets/upload_image/';
         $this->ci_widgets_path[] = APPPATH . 'widgets/menu/';
@@ -476,6 +475,18 @@ class Base_Loader extends CI_Loader
     {
         return parent::view($view, $vars, $return);
     }
+
+    /**
+   	 * @param string $view
+   	 * @param array  $params
+   	 * @param bool   $isGetBuffer
+   	 * @return void|string
+   	 */
+   	public function renderPartial($view, $params = array(), $isGetBuffer = false)
+   	{
+   		return $this->view($view, $params, $isGetBuffer);
+   	}
+
 
     /**
      * Model Loader

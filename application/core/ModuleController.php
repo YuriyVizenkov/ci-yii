@@ -53,7 +53,7 @@ abstract class ModuleController extends Base_Controller
         $this->load->setViews(array(MODULE_PATH . '/' . $moduleFolder . '/views/' => true));
 
 	    if ($this->layout) {
-		    $content = parent::render($view, $data, true);
+		    $content = parent::renderPartial($view, $data, true);
 		    parent::render(
                 $this->layout,
                 array(
@@ -68,6 +68,8 @@ abstract class ModuleController extends Base_Controller
 
     public function init()
     {
+        parent::init();
+
 	    $this->setViews(array(APPPATH . 'views/layouts/' => true));
         $this->setViews(array(MODULE_PATH . "/" . $this->getFolderNameFromModule(get_class($this->module)) . '/views/layouts/' => true));
         $this->setViews(array(MODULE_PATH . "/" . $this->getFolderNameFromModule(get_class($this->module)) . '/widgets/views/' => true));

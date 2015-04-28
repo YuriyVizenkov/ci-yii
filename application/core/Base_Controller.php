@@ -34,6 +34,11 @@ class Base_Controller extends CI_Controller
 	 */
 	protected static $initMigration = false;
 
+    /**
+     * @var bool|JSConfig
+     */
+    protected static $jsConfig = false;
+
 	/**
 	 * @var array
 	 */
@@ -43,6 +48,11 @@ class Base_Controller extends CI_Controller
 	 * @var UserModel
 	 */
 	protected $user;
+
+    /**
+     * @var string
+     */
+    protected $layout = 'index';
 
 	/**
 	 *
@@ -67,7 +77,14 @@ class Base_Controller extends CI_Controller
 		}
 
 		$this->createTransliteration();
-		}
+
+        $this->load->setViews(array(APPPATH . '/views/layouts/' => true));
+    }
+
+    public function init()
+    {
+        $this->getClientManager()->registerJS('core/app');
+    }
 
 	/**
 	 *
@@ -108,6 +125,18 @@ class Base_Controller extends CI_Controller
 		}
 	}
 
+    /**
+     * @return JSConfig
+     */
+    protected function getJsConfig()
+    {
+        if (self::$jsConfig === false) {
+            self::$jsConfig = new JSConfig();
+        }
+
+        return self::$jsConfig;
+    }
+
 
 	/**
 	 * @return ClientManager
@@ -140,7 +169,7 @@ class Base_Controller extends CI_Controller
 	 * @param bool   $isGetBuffer
 	 * @return void|string
 	 */
-	protected function render($view, $params = array(), $isGetBuffer = false)
+	public function render($view, $params = array(), $isGetBuffer = false)
 	{
 		if (!isset($params['content'])) {
 			$content = $this->load->view($view, $params, true);
@@ -149,8 +178,23 @@ class Base_Controller extends CI_Controller
 				'content' => $content
 			));
 		}
-		return $this->load->view($view, $params, $isGetBuffer);
+
+        $params['clientManager'] = $this->getClientManager();
+        $params['config'] = $this->getJsConfig()->getConfig();
+
+		return $this->load->view($this->layout, $params, $isGetBuffer);
 	}
+
+    /**
+     * @param $view
+     * @param array $params
+     * @param bool $isGetBuffer
+     * @return string|void
+     */
+    public function renderPartial($view, $params = array(), $isGetBuffer = false)
+    {
+        return $this->load->view($view, $params, $isGetBuffer);
+    }
 
 	/**
 	 * @param mixed $response
