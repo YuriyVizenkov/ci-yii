@@ -1,0 +1,79 @@
+/* 
+  CSS ����� ��� ������ (������ �� ���������� 
+  � �� ����� ��� �������! ��� ������� �� ��� 
+  ����� � ����)
+*/
+
+/* 
+  �������� ��������� ������ � ����������� �� 
+  ���� (������ ������ ����� ������ � ������� 
+  ���������� � ���� ����� ��������)
+*/
+
+.message-header.selected{background:#F00;} 
+
+.jq-cortege .noanswer {background: #e1ebff;}
+.jq-cortege .selected {background: #fff2cf;}
+.jq-cortege .normal {background: #ffffff;}
+.jq-cortege .evenRow {background: #f3f3f3;}
+.jq-cortege .notview {font-weight: bold;}
+.jq-cortege .thread_locked{background: #f3f3f3;}
+/* 
+  �������� ��������� ������� ����� �� ���� "����" ���� 
+  ��� �� ���������� �� ��������� ����� �������� gradient.png 
+  �� 4 ����� #FFF,#e1ebff, #fff2cf, #f3f3f3 � �������� 
+  ������ ���� ������ 35px � ������� �����-������� = ����������-������_����
+  �� ����� � �������� ����� ����� �����:
+	background: url(��������������������.png) no-repeat top left;
+*/
+.jq-cortege .noanswer .cell div.gDiv{background-position: 0 -30px;}
+.jq-cortege .selected .cell div.gDiv{background-position: 0 -60px;}
+.jq-cortege .evenRow .cell div.gDiv{background-position: 0 -90px;}
+.jq-cortege .thread_locked .cell div.gDiv{background-position: 0 -90px;}
+/* 
+  �������� ��� ��������� ������
+*/
+.jq-cortege .stat-icons .iconStatButton.owerdownload nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #67C265;
+  	background: -moz-linear-gradient(100% 100% 90deg, #459443, #67C265);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#67C265), to(#459443));
+}
+
+.jq-cortege .stat-icons .iconStatButton.blocked nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #000;
+  	background: -moz-linear-gradient(100% 100% 90deg, #000, #F00);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F00), to(#000));
+}
+
+.jq-cortege .stat-icons .iconStatButton.critical nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #FD0000;
+  	background: -moz-linear-gradient(100% 100% 90deg, #DD0604, #FD0000);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FD0000), to(#DD0604));
+}
+.jq-cortege .stat-icons .iconStatButton.high nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #FF6000;
+  	background: -moz-linear-gradient(100% 100% 90deg, #FF1200, #FF6000);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF6000), to(#FF1200));
+}
+.jq-cortege .stat-icons .iconStatButton.refund nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #FFA500;
+  	background: -moz-linear-gradient(100% 100% 90deg, #FF6C00, #FFA500);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFA500), to(#FF6C00));
+}
+.jq-cortege .stat-icons .iconStatButton.nologin nobr{
+	color:#FFF;
+	border: 1px solid #FFF;
+	background-color: #FF8E8E;
+  	background: -moz-linear-gradient(100% 100% 90deg, #FF4E4E, #FF8E8E);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF8E8E), to(#FF4E4E));
+}

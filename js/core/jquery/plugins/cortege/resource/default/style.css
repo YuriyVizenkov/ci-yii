@@ -1,0 +1,271 @@
+.cte_item div{float:left;overflow:hidden;}
+wbr { white-space: nowrap }
+.jq-cortege{
+	text-align:left;
+	background: #FFF;
+	overflow:hidden;
+}
+.jq-cortege  p, span{margin:0;padding:0;font-size:12px; font-family:Tahoma;}
+
+.jq-cortege .row{
+	width: 100%;
+  	display: table;
+	cursor: pointer;
+	background: #FFF;
+	overflow: hidden;
+}
+.jq-cortege .cell{
+  vertical-align:middle; 
+  display: table-cell !important;
+  display: inline; /* для IE */
+  border: 0px solid;
+  overflow: hidden;
+}
+.jq-cortege .cell div.gDiv{
+	margin-left:-40px;
+	margin-right:-1px;
+	position: relative;
+	width: 35px;
+	height:15px;
+	float:right;
+	background: url(gradient.png) no-repeat top left;
+	right:0px;
+	border: 0px solid;
+}
+.jq-cortege .cell.icon{
+	width:1px;
+	overflow: hidden;
+	border: 0px dashed #F00;
+}
+.jq-cortege .cell.caption{
+	width:1px;
+	max-width:1000px;
+	border:0px solid;
+}
+.jq-cortege .cell.caption p{
+	float: left;
+	height: 15px;
+	padding-left:5px;
+	padding-right:35px;
+	overflow: hidden;
+}
+.jq-cortege .cell.from{
+	width: 150px;
+	min-width: 150px;
+}
+.jq-cortege .cell.from p{
+	float: left;
+	width: 100%;
+	height: 15px;
+	padding-left:5px;
+	margin-right: -50px;
+	overflow: hidden;
+}
+.jq-cortege .cell.subject{
+	width:auto;
+}
+.jq-cortege .cell.subject p{ 
+	color:#7a7a7a;
+	float: left;
+	height: 15px;
+	padding-left:5px;
+	overflow:hidden;
+}
+.jq-cortege.threads .row.head{
+	height: 50px;
+	width: 100%;
+  	cursor: default;
+	background: none;
+}
+.jq-cortege.threads .row {
+	padding: 2px 0;
+	margin-bottom: -1px;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+.jq-cortege.threads .cell.isanswer{
+	color: #F00;
+}
+
+.jq-cortege.threads .cell .checkbox{
+	border: 1px solid;
+	position: absolute;
+	margin-left: -10px;
+}
+.jq-cortege.threads .cell.chk{
+	padding: 0 1px 0 0;
+	text-align:right;
+	width: 35px;
+	min-width:35px;
+}
+.jq-cortege.threads .cell.thread-mark-star{
+	width: 35px;
+	min-width:35px;
+	border: 0px solid #F00;
+	
+}
+.jq-cortege.threads .cell.thread-mark-star a{
+	margin-left:10px;
+	padding:0 0 0 15px;
+	background: url(icon_fav.png) no-repeat 0px 16px;
+	border: 0px solid #0F0;
+}
+.jq-cortege.threads .cell.thread-mark-star a.yellow{
+	background-position:0 0px;
+}
+.jq-cortege.threads .cell.thread-mark-star a.gray{
+	background-position:0 -16px;
+}
+.jq-cortege.threads .cell.thread-mark-star a.black{
+	background-position:0 -32px;
+}
+.jq-cortege.threads .stat-icons{
+	display: table;
+	border: 0px dashed #0FF;
+}
+.jq-cortege .stat-icons .iconStatButton{
+	vertical-align:middle; 
+  	display: table-cell !important;
+  	display: inline; /* для IE */
+	border: 0px double #00f;
+}
+.jq-cortege .stat-icons .iconStatButton nobr{
+	color:#000;
+	font: 11px Tahoma;
+	font-weight:normal;
+	margin: 0 1px;
+	padding: 2px 5px;
+	text-align:center;
+	vertical-align:middle;
+	background: #FFF;
+	border: 1px solid #AEAEAE;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.jq-cortege.threads .cell.count{
+	font-size:10px;
+	min-width: 30px;
+	width: 30px;
+	height: 15px;
+	text-align: right;
+}
+.jq-cortege.threads .cell.date{
+	font-size:10px;
+	min-width: 70px;
+	width: 70px;
+	height: 15px;
+	text-align: right;
+	padding-right:2px;
+}
+.jq-cortege.threads .cell.test{
+	position:absolute;
+	width: 10px;
+	border: 1px solid;
+	margin-left: -50px;
+}
+.jq-cortege.message .row, .jq-cortege.message .cell{
+	background: none;
+}
+.jq-cortege.message .row.thread-header{
+	padding: 15px 0 20px 0;
+	font-size:12px;	
+}
+.jq-cortege.message .cell.ID{
+	padding-left:50px;
+}
+.jq-cortege.message .cell.email{
+}
+.jq-cortege.message .cell.email a, .jq-cortege.message .cell.email a:hover{
+	color: inherit;
+	text-decoration:none;
+}
+.jq-cortege.message .cell.date{
+	width:150px;
+}
+.jq-cortege.message .cell.time{
+	width:100px;
+}
+.jq-cortege.message .cell.status{
+	width:15px;
+	border: 1px solid #d1d1d1;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 10px;
+	font-weight: bold;
+	background: #f2f2f2;
+}
+.jq-cortege.message .cell.fill{width:10px;}
+.jq-cortege.message .message-header{
+	-moz-border-radius-topleft: 7px; 
+	-webkit-border-top-left-radius: 7px; 
+	border-top-left-radius: 7px; 
+	-moz-border-radius-topright: 7px; 
+	-webkit-border-top-right-radius: 7px; 
+	border-top-right-radius: 7px;
+	height: 30px;
+	margin: -7px 0 0 0;
+	border: 1px solid #cfcfcf;
+	border-bottom-width: 0px;
+}
+.jq-cortege.message .message-header .row{
+	height:20px;
+	margin-top:3px;
+	border: 0px solid;
+}
+.jq-cortege.message .message-header .cell{
+	color: #7a7a7a;
+	text-align:left;
+}
+.jq-cortege.message .message-header .cell.from{
+	padding: 0 0 0 30px;
+	color: #000;
+	font-weight: bold;
+}
+.jq-cortege.message .message-header .cell.digest{
+}
+
+.jq-cortege.message .message-header .cell.t{border: 0px solid;padding: 0 5px 0 5px;}
+.jq-cortege.message .message-header .cell.t.date{width: 100px;text-align:right;}
+.jq-cortege.message .message-header .cell.t.time_ago{width:30px;}
+
+.jq-cortege.message .message-body{
+	padding: 10px 20px 30px 50px;
+	margin: -7px 0 0 -10;
+	display:none;
+	border: 1px solid #cfcfcf;
+	border-top-width: 0px;
+	
+}
+
+.jq-cortege.message .message-body a {
+	color: #0000EE !important;
+}
+
+.jq-cortege.message .mini-side .message-header{
+	height:10px;
+}
+
+.jq-cortege.message .mini-side .message-header .row{
+	display: none;
+}
+
+
+.jq-cortege.message .mini-side{
+	width: 100%;
+	padding:0;
+}
+.jq-cortege.message .main-side{
+	width: 100%;
+	padding:0;
+	
+}
+
+
+
+
+
+
